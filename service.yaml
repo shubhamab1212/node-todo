@@ -7,7 +7,7 @@ spec:
     app: node-app                      # Selector to match the Pods managed by this service
   ports:
     - protocol: TCP
-      port: 80                          # Port on which the service will be exposed
+      port: 80
       targetPort: 8080
-      nodeport: 31753                  # Port on the Pod that the application listens on
-  type: NodePort                   # Expose the service externally (use ClusterIP for internal-only)
+      nodePort: 30000  # Port to access the service externally
+  type: NodePort                  # Expose the service externally (use ClusterIP for internal-only)
