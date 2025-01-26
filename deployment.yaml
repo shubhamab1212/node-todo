@@ -22,3 +22,5 @@ spec:
         env:
         - name: NODE_ENV                 # Example environment variable
           value: "production"
+	- name: MONGO_URL                # New MongoDB connection string
+          value: mongodb://mongodb-service:27017/todo
