@@ -9,5 +9,5 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 8080
-      nodePort: 8080  # Port to access the service externally
+      nodePort: 31753  # Port to access the service externally
   type: NodePort                  # Expose the service externally (use ClusterIP for internal-only)
