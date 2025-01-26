@@ -18,7 +18,7 @@ spec:
         - name: node-app                # Container name
           image: docker.io/shubhamab1212/my-node-app:latest  # Image name from Docker Hub
           ports:
-            - containerPort: 8080       # Port the container listens on (replace with your app's port)
+            - containerPort: 31753       # Port the container listens on (replace with your app's port)
           env:
             - name: NODE_ENV            # Example environment variable
               value: "production"
