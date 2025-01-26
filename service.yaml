@@ -8,5 +8,5 @@ spec:
   ports:
     - protocol: TCP
       port: 80                          # Port on which the service will be exposed
-      targetPort: 3000                  # Port on the Pod that the application listens on
+      targetPort: 8080                  # Port on the Pod that the application listens on
   type: LoadBalancer                   # Expose the service externally (use ClusterIP for internal-only)
