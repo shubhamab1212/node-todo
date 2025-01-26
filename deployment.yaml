@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-app-deployment            # Name of the deployment
+  labels:
+    app: node-app                      # Labels to associate with the deployment
+spec:
+  replicas: 3                          # Number of replicas (Pods) to run
+  selector:
+    matchLabels:
+      app: node-app                     # Selector to match the Pods to the deployment
+  template:
+    metadata:
+      labels:
+        app: node-app                   # Labels to associate with the Pods
+    spec:
+      containers:
+      - name: node-app                  # Container name
+        image: "docker.io/yourusername/my-node-app"  # Image name from Docker Hub (replace with your username/image)
+        ports:
+        - containerPort: 3000            # Port the container listens on (replace with your app's port)
+        env:
+        - name: NODE_ENV                 # Example environment variable
+          value: "production"
