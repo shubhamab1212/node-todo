@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: node-app-service               # Name of the service
+spec:
+  selector:
+    app: node-app                      # Selector to match the Pods managed by this service
+  ports:
+    - protocol: TCP
+      port: 80                          # Port on which the service will be exposed
+      targetPort: 3000                  # Port on the Pod that the application listens on
+  type: LoadBalancer                   # Expose the service externally (use ClusterIP for internal-only)
